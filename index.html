@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brooklyn Fitboxing — Propuesta de Financiación — Viladecans</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0a0f1a;--bg2:#111827;--card:#1a2236;--card-h:#1f2a42;
+--t1:#f0f4f8;--t2:#94a3b8;--t3:#64748b;
+--g:#FFCC00;--gl:#FFD633;--gg:rgba(255,204,0,.25);
+--r:#e74c3c;--rl:#ff6b6b;--gold:#FFCC00;--blue:#3b82f6;
+--border:rgba(255,255,255,.06);
+--rad:16px;--rads:10px;--tr:.3s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(255,204,0,.06) 0%,transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(255,204,0,.03) 0%,transparent 60%);pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,15,26,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px}
+nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.4)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,#FFCC00,#FFD633);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#000}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{color:var(--t2);text-decoration:none;font-size:12px;font-weight:500;padding:6px 12px;border-radius:8px;transition:var(--tr)}
+.nav-links a:hover{color:var(--t1);background:rgba(255,255,255,.06)}
+@media(max-width:1000px){.nav-links{display:none}}
+
+/* COMMON */
+section{position:relative;z-index:1;padding:90px 24px}
+.container{max-width:1200px;margin:0 auto}
+.slabel{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--g);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.slabel::before{content:'';width:24px;height:2px;background:var(--g)}
+.stitle{font-family:'Oswald',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:0px;line-height:1.2;margin-bottom:16px;text-transform:uppercase}
+.ssub{font-size:16px;color:var(--t2);max-width:700px;line-height:1.7}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:28px;transition:var(--tr)}
+.card:hover{background:var(--card-h);border-color:rgba(255,204,0,.15);transform:translateY(-2px)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at center,rgba(255,204,0,.08) 0%,transparent 50%);animation:hg 8s ease-in-out infinite alternate}
+@keyframes hg{0%{transform:scale(1) rotate(0)}100%{transform:scale(1.1) rotate(5deg)}}
+.hero-content{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,204,0,.15);border:1px solid rgba(255,204,0,.3);padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;color:#FFCC00;margin-bottom:32px}
+.dot{width:8px;height:8px;background:var(--g);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(36px,6vw,72px);font-weight:700;letter-spacing:2px;line-height:1.05;margin-bottom:20px;text-transform:uppercase;background:linear-gradient(135deg,#fff,#e0e0e0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .accent{background:linear-gradient(135deg,var(--g),var(--gl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .subtitle{font-size:clamp(16px,2vw,20px);color:var(--t2);margin-bottom:12px}
+.hero .headline{font-size:clamp(14px,1.6vw,17px);color:var(--gl);font-weight:600;margin-bottom:48px}
+.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .value{font-size:34px;font-weight:800;color:var(--g);letter-spacing:-1px}
+.hero-stat .label{font-size:12px;color:var(--t3);font-weight:500;margin-top:4px}
+
+/* EXEC GRID */
+.exec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:40px}
+.exec-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px 20px;text-align:center;position:relative;overflow:hidden;transition:var(--tr)}
+.exec-card:hover{transform:translateY(-4px);box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.exec-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--rad) var(--rad) 0 0}
+.exec-card.green::before{background:linear-gradient(135deg,var(--g),var(--gl))}
+.exec-card.gold::before{background:linear-gradient(135deg,var(--gold),#fbbf24)}
+.exec-card.blue::before{background:linear-gradient(135deg,var(--blue),#60a5fa)}
+.exec-card .icon{font-size:26px;margin-bottom:10px}
+.exec-card .metric{font-size:26px;font-weight:800;letter-spacing:-1px;margin-bottom:4px}
+.exec-card.green .metric{color:var(--g)}
+.exec-card.gold .metric{color:var(--gold)}
+.exec-card.blue .metric{color:var(--blue)}
+.exec-card .desc{font-size:12px;color:var(--t2);font-weight:500;line-height:1.5}
+
+/* BRAND */
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+@media(max-width:768px){.brand-grid{grid-template-columns:1fr}}
+.brand-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px;transition:var(--tr)}
+.brand-card:hover{background:var(--card-h);transform:translateY(-2px)}
+.brand-card .ci{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.ci.green{background:rgba(255,204,0,.12)}.ci.blue{background:rgba(59,130,246,.12)}.ci.gold{background:rgba(245,158,11,.12)}.ci.purple{background:rgba(139,92,246,.12)}
+.brand-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.brand-card p,.brand-card li{font-size:13px;color:var(--t2);line-height:1.7}
+.brand-card ul{list-style:none;padding:0}
+.brand-card li{padding:3px 0 3px 18px;position:relative}
+.brand-card li::before{content:'✓';position:absolute;left:0;color:var(--g);font-weight:700;font-size:12px}
+.brand-full{grid-column:1/-1}
+.country-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.country-tag{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--t2)}
+.quote-block{background:linear-gradient(135deg,rgba(255,204,0,.08),rgba(255,204,0,.02));border:1px solid rgba(255,204,0,.15);border-left:4px solid var(--g);border-radius:0 var(--rad) var(--rad) 0;padding:28px;margin-top:40px}
+.quote-block .qt{font-size:17px;font-style:italic;color:var(--t1);line-height:1.7;margin-bottom:10px}
+.quote-block .qa{font-size:13px;color:var(--g);font-weight:600}
+
+/* STAR SECTION */
+.star-section{background:linear-gradient(180deg,var(--bg) 0%,rgba(255,204,0,.03) 50%,var(--bg) 100%)}
+.mega-badge{background:linear-gradient(135deg,rgba(255,204,0,.15),rgba(255,204,0,.05));border:2px solid rgba(255,204,0,.3);border-radius:20px;padding:28px 36px;text-align:center;margin:40px 0;position:relative;overflow:hidden}
+.mega-badge::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,204,0,.1) 0%,transparent 60%);animation:mp 4s ease-in-out infinite}
+@keyframes mp{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.1);opacity:1}}
+.mega-text{position:relative;z-index:1;font-size:clamp(16px,2.5vw,24px);font-weight:800;color:var(--g)}
+.mega-sub{position:relative;z-index:1;font-size:14px;color:var(--t2);margin-top:8px}
+.data-note{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-left:4px solid var(--blue);border-radius:0 var(--rads) var(--rads) 0;padding:16px 20px;margin:24px 0;font-size:13px;color:var(--t2);line-height:1.6}
+.data-note strong{color:var(--blue)}
+
+/* COMPARE */
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:32px 0}
+.compare-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px;position:relative;overflow:hidden}
+.compare-card::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle,var(--gg),transparent);opacity:.5}
+.compare-card .cl{font-size:12px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.compare-card .cr{font-size:30px;font-weight:800;color:var(--g);letter-spacing:-1px}
+.compare-card .cp{font-size:14px;color:var(--t3);margin-top:4px;text-decoration:line-through}
+.compare-card .cb{display:inline-flex;align-items:center;gap:4px;background:rgba(255,204,0,.12);border:1px solid rgba(255,204,0,.2);color:var(--g);font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;margin-top:10px}
+
+/* CHARTS */
+.chart-container{margin:40px 0}
+.chart-title{font-size:16px;font-weight:700;margin-bottom:20px}
+.bar-chart{display:flex;align-items:flex-end;gap:6px;height:200px;padding-bottom:32px;position:relative;border-bottom:1px solid var(--border)}
+.bar-group{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
+.bar{width:100%;max-width:46px;border-radius:5px 5px 0 0;position:relative;transition:height 1s ease;min-height:4px}
+.bar.green{background:linear-gradient(135deg,#FFCC00,#FFD633)}.bar.blue{background:linear-gradient(135deg,var(--blue),#60a5fa)}
+.bar-value{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;color:var(--t2);white-space:nowrap}
+.bar-label{position:absolute;bottom:-24px;font-size:10px;color:var(--t3);font-weight:600;white-space:nowrap}
+.real-tag{display:inline-block;background:rgba(255,204,0,.15);color:var(--g);font-size:9px;font-weight:800;padding:1px 5px;border-radius:4px;margin-left:2px}
+.proj-tag{display:inline-block;background:rgba(255,255,255,.06);color:var(--t3);font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:2px}
+
+.timeline-note{display:flex;align-items:center;gap:12px;background:rgba(255,204,0,.08);border:1px solid rgba(255,204,0,.15);border-radius:var(--rads);padding:14px 20px;margin-top:20px;font-size:13px;font-weight:600;color:var(--gl)}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:40px}
+.team-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:28px;display:flex;gap:20px;transition:var(--tr)}
+.team-card:hover{background:var(--card-h);transform:translateY(-2px)}
+.team-avatar{width:56px;height:56px;min-width:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#000}
+.team-card h3{font-size:16px;font-weight:700;margin-bottom:2px}
+.team-card .role{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.team-card p{font-size:13px;color:var(--t2);line-height:1.6}
+.team-card ul{list-style:none;padding:0;margin-top:6px}
+.team-card li{font-size:12px;color:var(--t2);padding:2px 0 2px 16px;position:relative}
+.team-card li::before{content:'→';position:absolute;left:0;color:var(--g);font-weight:700}
+
+/* COACH CARDS */
+.coach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+.coach-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px;text-align:center;transition:var(--tr)}
+.coach-card:hover{background:var(--card-h);transform:translateY(-2px)}
+.coach-avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px;border:2px solid rgba(255,204,0,.3)}
+.coach-card h3{font-size:15px;font-weight:700}
+.coach-card .coach-role{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--g);margin-bottom:8px}
+.coach-card p{font-size:13px;color:var(--t2);line-height:1.6}
+
+/* COMMUNITY */
+.comm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:40px}
+.comm-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px;text-align:center;transition:var(--tr)}
+.comm-card:hover{transform:translateY(-2px);background:var(--card-h)}
+.comm-card .ci2{font-size:36px;margin-bottom:12px}
+.comm-card h3{font-size:18px;font-weight:800;color:var(--gold);margin-bottom:4px}
+.comm-card p{font-size:13px;color:var(--t2)}
+
+/* VILADECANS */
+.vila-compare{display:grid;grid-template-columns:1fr 60px 1fr;gap:20px;align-items:center;margin:40px 0}
+@media(max-width:768px){.vila-compare{grid-template-columns:1fr;gap:12px}.vila-arrow{transform:rotate(90deg)}}
+.vila-box{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:28px;text-align:center}
+.vila-box h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.vila-box .big{font-size:36px;font-weight:900;letter-spacing:-1px;margin:8px 0}
+.vila-arrow{text-align:center;font-size:28px;color:var(--g)}
+.opti-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.opti-item{display:flex;align-items:flex-start;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--rads);padding:16px;font-size:13px;color:var(--t2)}
+.opti-item .oi{font-size:18px}
+
+/* INVEST TABLE */
+.invest-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+@media(max-width:768px){.invest-grid{grid-template-columns:1fr}}
+.invest-table{width:100%;border-collapse:collapse}
+.invest-table th,.invest-table td{padding:10px 14px;text-align:left;font-size:13px;border-bottom:1px solid var(--border)}
+.invest-table th{color:var(--t3);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.invest-table td:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.invest-table tr.total td{border-top:2px solid var(--g);font-weight:800;font-size:15px;color:var(--g);padding-top:14px}
+.detail-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.detail-item:last-child{border-bottom:none}
+.detail-item .label{color:var(--t2)}.detail-item .value{font-weight:700;font-variant-numeric:tabular-nums}
+
+/* SCENARIOS */
+.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+@media(max-width:900px){.scenario-grid{grid-template-columns:1fr}}
+.scenario-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:28px;text-align:center;transition:var(--tr)}
+.scenario-card:hover{transform:translateY(-4px);box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.scenario-card.featured{border-color:rgba(255,204,0,.3);background:linear-gradient(180deg,rgba(255,204,0,.06),var(--card))}
+.scenario-card.featured::before{content:'★ CASO PRINCIPAL';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--g),var(--gl));color:#000;font-size:10px;font-weight:800;padding:4px 14px;border-radius:20px;letter-spacing:1px}
+.scenario-card{position:relative}
+.sc-name{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
+.sc-value{font-size:40px;font-weight:900;letter-spacing:-2px}
+.sc-label{font-size:12px;color:var(--t3);font-weight:500}
+.sc-details{text-align:left;padding-top:16px;border-top:1px solid var(--border);margin-top:16px}
+.sc-row{display:flex;justify-content:space-between;padding:6px 0;font-size:13px}
+.sc-row .label{color:var(--t2)}.sc-row .value{font-weight:700}
+
+/* PROJ TABLE */
+.proj-wrapper{overflow-x:auto;margin-top:40px;border-radius:var(--rad);border:1px solid var(--border)}
+.proj-table{width:100%;border-collapse:collapse;min-width:700px}
+.proj-table th,.proj-table td{padding:12px 14px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums;border-bottom:1px solid var(--border)}
+.proj-table th{background:var(--card);color:var(--t3);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.proj-table th:first-child,.proj-table td:first-child{text-align:left;font-weight:600;color:var(--t1)}
+.proj-table td{color:var(--t2)}
+.proj-table tr:last-child td{border-bottom:none;font-weight:700;color:var(--g);font-size:14px}
+.proj-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:28px}
+.pscard{background:var(--card);border:1px solid var(--border);border-radius:var(--rads);padding:20px;text-align:center}
+.pscard .psv{font-size:30px;font-weight:800;color:var(--g);letter-spacing:-1px}
+.pscard .psl{font-size:12px;color:var(--t3);margin-top:4px}
+
+/* SYNERGIES */
+.syn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.syn-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px;transition:var(--tr)}
+.syn-card:hover{background:var(--card-h);transform:translateY(-2px)}
+.syn-card .si{font-size:28px;margin-bottom:10px}
+.syn-card h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.syn-card p{font-size:13px;color:var(--t2);line-height:1.6}
+
+/* VISION TIMELINE */
+.vtl{position:relative;margin:40px 0;padding-left:40px}
+.vtl::before{content:'';position:absolute;left:16px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--g),var(--blue),var(--gold))}
+.vtl-item{position:relative;margin-bottom:32px}
+.vtl-item::before{content:'';position:absolute;left:-32px;top:6px;width:14px;height:14px;border-radius:50%;border:3px solid var(--g);background:var(--bg)}
+.vtl-item.active::before{background:var(--g)}
+.vtl-item h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.vtl-item .yr{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--g);margin-bottom:4px}
+.vtl-item p{font-size:13px;color:var(--t2)}
+
+/* RISK */
+.risk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:40px}
+.risk-item{display:flex;align-items:flex-start;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:var(--rads);padding:16px;transition:var(--tr)}
+.risk-item:hover{background:var(--card-h);border-color:rgba(255,204,0,.15)}
+.risk-check{width:26px;height:26px;min-width:26px;background:rgba(255,204,0,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--g);font-size:13px;font-weight:800}
+.risk-text{font-size:13px;color:var(--t2);line-height:1.6}
+.risk-text strong{color:var(--t1)}
+
+/* CONCLUSION */
+.conclusion{background:linear-gradient(180deg,var(--bg),rgba(255,204,0,.04));text-align:center}
+.conclusion .big-text{font-size:clamp(20px,3vw,28px);font-weight:800;line-height:1.4;margin-bottom:20px}
+.conclusion .big-text .accent{color:var(--g)}
+.conc-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.conc-pill{background:rgba(255,204,0,.1);border:1px solid rgba(255,204,0,.2);border-radius:50px;padding:8px 20px;font-size:13px;font-weight:600;color:var(--gl)}
+
+/* FOOTER */
+footer{position:relative;z-index:1;padding:50px 24px;border-top:1px solid var(--border);text-align:center}
+footer .fl{font-size:13px;color:var(--t3);margin-bottom:6px}
+footer .fl.main{font-size:15px;font-weight:600;color:var(--t2)}
+footer .fc{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:8px 18px;font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+
+/* GALLERY */
+.ig-section{background:var(--bg2);padding:60px 24px}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:32px;border-radius:var(--rad);overflow:hidden}
+@media(max-width:768px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+.ig-grid img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .5s,filter .3s;filter:brightness(.85)}
+.ig-grid img:hover{transform:scale(1.06);filter:brightness(1)}
+.ig-cta{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:linear-gradient(135deg,#FFCC00,#FFD633);color:#000;font-weight:700;font-size:14px;padding:12px 28px;border-radius:50px;text-decoration:none;transition:var(--tr)}
+.ig-cta:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,204,0,.3)}
+.ig-cta svg{width:20px;height:20px}
+
+/* PRESS */
+.press-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:32px}
+.press-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rad);padding:24px;transition:var(--tr);text-decoration:none;color:inherit;display:block}
+.press-card:hover{background:var(--card-h);transform:translateY(-2px);border-color:rgba(255,204,0,.2)}
+.press-source{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#FFCC00;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.press-card h3{font-size:15px;font-weight:700;margin-bottom:8px;line-height:1.4}
+.press-card p{font-size:13px;color:var(--t2);line-height:1.6}
+.press-card .press-date{font-size:11px;color:var(--t3);margin-top:10px}
+.press-highlight{background:linear-gradient(135deg,rgba(255,204,0,.06),rgba(255,204,0,.02));border:1px solid rgba(255,204,0,.15);border-radius:var(--rad);padding:24px 28px;margin-top:24px;display:flex;align-items:flex-start;gap:16px}
+.press-highlight .ph-icon{font-size:32px;flex-shrink:0}
+.press-highlight blockquote{font-size:15px;font-style:italic;color:var(--t1);line-height:1.7;margin:0}
+.press-highlight cite{display:block;font-size:12px;color:#FFCC00;font-weight:600;margin-top:8px;font-style:normal}
+
+/* PRINT */
+@media print{
+body{background:#fff;color:#111}nav{display:none}section{padding:40px 0}.hero{min-height:auto;padding:60px 0}.hero::before{display:none}
+.card,.compare-card,.scenario-card,.exec-card,.brand-card,.risk-item,.team-card,.coach-card,.comm-card,.syn-card,.vila-box{background:#f8f9fa;border-color:#ddd;break-inside:avoid}
+.hero h1,.stitle{color:#111;-webkit-text-fill-color:#111}.mega-badge{border-color:var(--g)}.bar{print-color-adjust:exact;-webkit-print-color-adjust:exact}.reveal{opacity:1;transform:none}
+}
+
+/* HERO BG */
+.hero{background:linear-gradient(180deg,rgba(10,15,26,.85) 0%,rgba(10,15,26,.7) 40%,rgba(10,15,26,.9) 100%),url('https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/2H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN_2-1024x604.png') center/cover no-repeat}
+
+/* PHOTO GALLERY */
+.photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:40px 0;border-radius:var(--rad);overflow:hidden}
+.photo-strip img{width:100%;height:200px;object-fit:cover;transition:transform .5s;filter:brightness(.9)}
+.photo-strip img:hover{transform:scale(1.05);filter:brightness(1)}
+@media(max-width:768px){.photo-strip{grid-template-columns:repeat(2,1fr)}.photo-strip img{height:140px}}
+
+/* PHOTO DIVIDER */
+.photo-divider{position:relative;z-index:1;height:300px;background-attachment:fixed;background-size:cover;background-position:center;margin:0}
+.photo-divider::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(10,15,26,.3),var(--bg))}
+@media(max-width:768px){.photo-divider{height:200px;background-attachment:scroll}}
+
+/* BROOKLYN LOGO NAV */
+.nav-logo-img{height:28px;filter:brightness(0) invert(1);margin-right:8px}
+
+/* ACCENT ADJUSTMENTS FOR YELLOW ON DARK */
+.slabel{color:#FFCC00}
+.slabel::before{background:#FFCC00}
+.hero-stat .value{color:#FFCC00}
+.exec-card.green .metric{color:#FFCC00}
+.exec-card.green::before{background:linear-gradient(135deg,#FFCC00,#FFD633)}
+.mega-text{color:#FFCC00}
+.compare-card .cr{color:#FFCC00}
+.compare-card .cb{background:rgba(255,204,0,.12);border-color:rgba(255,204,0,.25);color:#FFCC00}
+.timeline-note{background:rgba(255,204,0,.08);border-color:rgba(255,204,0,.15);color:#FFD633}
+.team-card li::before{color:#FFCC00}
+.coach-card .coach-role{color:#FFCC00}
+.risk-check{background:rgba(255,204,0,.12);color:#FFCC00}
+.conc-pill{background:rgba(255,204,0,.1);border-color:rgba(255,204,0,.2);color:#FFD633}
+.conclusion .big-text .accent{color:#FFCC00}
+.vtl-item.active::before{background:#FFCC00}
+.vtl-item::before{border-color:#FFCC00}
+.vtl-item .yr{color:#FFCC00}
+.invest-table tr.total td{border-top-color:#FFCC00;color:#FFCC00}
+.proj-table tr:last-child td{color:#FFCC00}
+.pscard .psv{color:#FFCC00}
+.sc-value{color:#FFCC00 !important}
+.scenario-card.featured{border-color:rgba(255,204,0,.3);background:linear-gradient(180deg,rgba(255,204,0,.06),var(--card))}
+.scenario-card.featured::before{background:linear-gradient(135deg,#FFCC00,#FFD633);color:#000}
+.real-tag{background:rgba(255,204,0,.15);color:#FFCC00}
+.dot{background:#FFCC00}
+.bar-value{color:#FFD633}
+footer .fc{border-color:rgba(255,204,0,.2);color:#FFCC00}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+<div class="nav-inner">
+<div class="nav-brand"><img src="https://www.brooklynfitboxing.com/public/images/logos/corporate-logo.png" alt="Brooklyn Fitboxing" class="nav-logo-img"> Brooklyn Fitboxing</div>
+<ul class="nav-links">
+<li><a href="#resumen">Resumen</a></li>
+<li><a href="#marca">Marca</a></li>
+<li><a href="#santboi">Sant Boi ⭐</a></li>
+<li><a href="#equipo">Equipo</a></li>
+<li><a href="#viladecans">Viladecans</a></li>
+<li><a href="#plan">Plan</a></li>
+<li><a href="#escenarios">Escenarios</a></li>
+<li><a href="#riesgo">Riesgo</a></li>
+<li><a href="#vision">Visión</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+<div class="hero-content">
+<div class="hero-badge"><span class="dot"></span> Propuesta de Financiación 2026</div>
+<h1>Brooklyn <span class="accent">Fitboxing</span></h1>
+<p class="subtitle">Nuevo Club Smart 12 Sacos — Viladecans, Barcelona</p>
+<p class="headline">Un modelo ya validado y sobreperformante. Ahora en fase de scaling.</p>
+<div class="hero-stats">
+<div class="hero-stat"><div class="value" data-count="270">0</div><div class="label">Centros Globales</div></div>
+<div class="hero-stat"><div class="value">+50<span style="font-size:22px">M€</span></div><div class="label">Facturación 2025</div></div>
+<div class="hero-stat"><div class="value" data-count="300">0</div><div class="label">Socios Sant Boi (6 meses)</div></div>
+<div class="hero-stat"><div class="value">10.7<span style="font-size:22px">x</span></div><div class="label">Sant Boi vs Plan</div></div>
+</div>
+</div>
+</section>
+
+<!-- ═══ RESUMEN EJECUTIVO ═══ -->
+<section id="resumen">
+<div class="container">
+<div class="reveal"><div class="slabel">Resumen Ejecutivo</div>
+<h2 class="stitle">Las cifras clave de la propuesta — Viladecans</h2>
+<p class="ssub">Replicación optimizada de un modelo que ya ha superado todas las expectativas en Sant Boi. Inversión reducida un 23% gracias a la experiencia adquirida.</p>
+</div>
+<div class="exec-grid">
+<div class="exec-card green reveal"><div class="icon">💰</div><div class="metric">~170.000€</div><div class="desc">Inversión total target<br>(+IVA) — optimizada</div></div>
+<div class="exec-card blue reveal"><div class="icon">🏦</div><div class="metric">~130.000€</div><div class="desc">Financiación solicitada<br>(~70% del total)</div></div>
+<div class="exec-card gold reveal"><div class="icon">🔑</div><div class="metric">~60.000€</div><div class="desc">Inversión propia<br>de los fundadores</div></div>
+<div class="exec-card green reveal"><div class="icon">📈</div><div class="metric">36%</div><div class="desc">TIR estimada<br>(caso base)</div></div>
+<div class="exec-card green reveal"><div class="icon">⏱️</div><div class="metric">3 años</div><div class="desc">Recuperación inversión<br>(caso base)</div></div>
+<div class="exec-card gold reveal"><div class="icon">👥</div><div class="metric">140</div><div class="desc">Punto de equilibrio<br>(nº de socios)</div></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ LA MARCA ═══ -->
+<section id="marca">
+<div class="container">
+<div class="reveal"><div class="slabel">La Marca</div>
+<h2 class="stitle">Brooklyn Fitboxing: Líder europeo en fitness boutique</h2>
+<p class="ssub">Boxeo sin contacto + tecnología patentada + gamificación = la experiencia fitness más adictiva y escalable del mercado.</p>
+</div>
+<div class="brand-grid">
+<div class="brand-card reveal"><div class="ci green">🌍</div><h3>Presencia Global</h3>
+<ul><li>+270 centros operativos en 10+ países (2025)</li><li>Objetivo: 350 centros para 2026</li><li>200+ centros solo en España</li><li>Facturación global +50M€ (2025)</li><li>Objetivo 52,5–55M€ en 2026</li><li>Crecimiento del 36% en 2024</li></ul></div>
+<div class="brand-card reveal"><div class="ci blue">🧠</div><h3>Tecnología Patentada</h3>
+<ul><li>Sacos inteligentes con sensores IoT</li><li>App gamificada con rankings globales</li><li>Medición de rendimiento en tiempo real</li><li>Sistema de logros y progresión</li><li>Experiencia inmersiva (luces, sonido, datos)</li><li>Formato Brooklyn Go para integraciones</li></ul></div>
+<div class="brand-card reveal"><div class="ci gold">💪</div><h3>Modelo de Éxito Probado</h3>
+<ul><li>+80.000 miembros recurrentes activos</li><li>+20.000 usuarios adicionales con packs</li><li>ARPU: ~56€/mes por socio</li><li>Frecuencia media: 7-8 entrenos/mes</li><li>ROI demostrado en primer año</li><li>Contrato: 7 + 3 años renovables</li></ul></div>
+<div class="brand-card reveal"><div class="ci purple">🤝</div><h3>Satisfacción del Franquiciado</h3>
+<ul><li><strong>60%+ de franquiciados tienen +1 club</strong></li><li>Modelo estandarizado y replicable</li><li>Soporte integral: marketing, tech, formación</li><li>Compromiso social: Hit4Change (H4C)</li><li>Comunidad activa entre clubs y miembros</li><li>Inversión: 50.000€ – 200.000€ según formato</li></ul></div>
+<div class="brand-card brand-full reveal"><div class="ci green">🗺️</div><h3>Presencia Internacional</h3>
+<div class="country-tags">
+<span class="country-tag">🇪🇸 España — 200+</span><span class="country-tag">🇮🇹 Italia — 18</span><span class="country-tag">🇵🇹 Portugal — 9</span><span class="country-tag">🇦🇷 Argentina — 7</span><span class="country-tag">🇩🇪 Alemania — 6</span><span class="country-tag">🇫🇷 Francia — 4</span><span class="country-tag">🇷🇺 Rusia — 3</span><span class="country-tag">🇲🇽 México — 3</span><span class="country-tag">🇧🇷 Brasil — 2026</span>
+</div></div>
+</div>
+<div class="quote-block reveal">
+<div class="qt">"No vendemos sesiones sueltas, sino un programa de transformación. El cliente no viene sólo a entrenar, viene a conseguir un objetivo, y eso es lo que fideliza."</div>
+<div class="qa">— Juan Pablo Nebrera, Fundador y CEO de Brooklyn Fitboxing</div>
+</div>
+
+<!-- PHOTO GALLERY -->
+<div class="container">
+<div class="photo-strip reveal">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/05H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Interior Brooklyn Fitboxing" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/10H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Recepción Brooklyn Fitboxing" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/09H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Sala de entrenamiento" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/07H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Vestuarios Brooklyn Fitboxing" loading="lazy">
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PHOTO DIVIDER -->
+<div class="photo-divider" style="background-image:url('https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/2H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN_2-1024x604.png')"></div>
+
+<!-- ═══ SANT BOI ⭐ ═══ -->
+<section id="santboi" class="star-section">
+<div class="container">
+<div class="reveal"><div class="slabel">⭐ Prueba de Concepto — Sant Boi de Llobregat</div>
+<h2 class="stitle">Product-Market Fit validado y más rápido de lo previsto</h2>
+<p class="ssub">Club abierto el 8 de octubre de 2025. Con apenas 6 meses de actividad, los resultados superan ampliamente todas las proyecciones del plan de negocio.</p>
+</div>
+
+<div class="data-note reveal">
+<strong>📌 Nota sobre los datos:</strong> Los datos de <strong>octubre 2025 → marzo 2026</strong> son <strong>datos reales</strong>. Las cifras de abril a septiembre son <strong>proyecciones conservadoras</strong> basadas en la tracción y el ritmo de crecimiento observado. A la vista del rendimiento real, estas proyecciones son deliberadamente prudentes.
+</div>
+
+<div class="mega-badge reveal">
+<div class="mega-text">🏆 El club de Sant Boi genera en su PRIMER AÑO un resultado 10.7x superior al plan de negocio</div>
+<div class="mega-sub">~300 socios en 6 meses • Rentable desde el Mes 2 • Ramp-up excepcionalmente rápido • Fill rate 90-95% en franjas punta</div>
+</div>
+
+<div class="compare-grid">
+<div class="compare-card reveal"><div class="cl">Socios Mes 12 (proyección)</div><div class="cr" data-count="360">0</div><div class="cp">Plan: 210 socios</div><div class="cb">↑ +71% sobre el plan</div></div>
+<div class="compare-card reveal"><div class="cl">Facturación Año 1 (IVA inc.)</div><div class="cr">266.277€</div><div class="cp">Plan: 128.364€</div><div class="cb">↑ +107% sobre el plan</div></div>
+<div class="compare-card reveal"><div class="cl">Resultado antes de préstamos</div><div class="cr">77.105€</div><div class="cp">Plan: 7.203€</div><div class="cb">↑ +970% (10.7x)</div></div>
+<div class="compare-card reveal"><div class="cl">Cash Flow acumulado Año 1</div><div class="cr">93.724€</div><div class="cp">—</div><div class="cb">💰 Flujo de caja excepcional</div></div>
+<div class="compare-card reveal"><div class="cl">Fill Rate franjas punta</div><div class="cr">90-95%</div><div class="cp">—</div><div class="cb">🔥 Capacidad casi máxima</div></div>
+<div class="compare-card reveal"><div class="cl">Comunidad WhatsApp</div><div class="cr">~200</div><div class="cp">para ~300 socios</div><div class="cb">🤝 Engagement brutal (67%)</div></div>
+</div>
+
+<!-- HEALTH METRICS -->
+<div class="compare-grid" style="margin-top:12px">
+<div class="compare-card reveal"><div class="cl">Churn mensual</div><div class="cr">5-6%</div><div class="cp">Media sector: 8-12%</div><div class="cb">↓ Muy por debajo de la media</div></div>
+<div class="compare-card reveal"><div class="cl">Tasa de ocupación</div><div class="cr">+80%</div><div class="cp">Franjas punta: 90-95%</div><div class="cb">↑ Capacidad casi llena</div></div>
+<div class="compare-card reveal"><div class="cl">Ratio de satisfacción</div><div class="cr">+90%</div><div class="cp">—</div><div class="cb">⭐ Excelencia operativa</div></div>
+</div>
+
+<div class="compare-grid" style="margin-top:12px">
+<div class="compare-card reveal"><div class="cl">Conversión prueba → socio</div><div class="cr">55%</div><div class="cp">Media red Brooklyn: ~35-40%</div><div class="cb">↑ Gestión comercial excepcional</div></div>
+<div class="compare-card reveal"><div class="cl">Web Offers (pruebas/mes)</div><div class="cr">60-100</div><div class="cp">—</div><div class="cb">🔥 Flujo de leads constante y top</div></div>
+</div>
+
+<div class="timeline-note reveal" style="margin-top:16px;margin-bottom:32px">
+<span style="font-size:18px">📊</span>
+<span><strong>Lectura para el banco:</strong> Churn 5-6% (vs 8-12% media sector), ocupación +80%, satisfacción &gt;90% y una conversión del 55% (vs ~35-40% media red) confirman un negocio sano, bien gestionado y con una capacidad comercial fuera de lo común. El flujo de 60-100 pruebas/mes demuestra una demanda orgánica sostenida.</span>
+</div>
+
+<!-- Revenue Chart -->
+<div class="chart-container reveal">
+<div class="chart-title">📊 Evolución Facturación Mensual — <span class="real-tag">REAL</span> Oct→Mar + <span class="proj-tag">PROY.</span> Abr→Sep</div>
+<div class="bar-chart" id="revenueChart">
+<div class="bar-group"><div class="bar green" data-height="57"><div class="bar-value">15.352€</div></div><div class="bar-label">Oct ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="61"><div class="bar-value">16.572€</div></div><div class="bar-label">Nov ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="76"><div class="bar-value">20.457€</div></div><div class="bar-label">Dic ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="78"><div class="bar-value">21.184€</div></div><div class="bar-label">Ene ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="78"><div class="bar-value">21.184€</div></div><div class="bar-label">Feb ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="84"><div class="bar-value">22.636€</div></div><div class="bar-label">Mar ✓</div></div>
+<div class="bar-group"><div class="bar blue" data-height="84"><div class="bar-value">22.636€</div></div><div class="bar-label">Abr</div></div>
+<div class="bar-group"><div class="bar blue" data-height="89"><div class="bar-value">24.089€</div></div><div class="bar-label">May</div></div>
+<div class="bar-group"><div class="bar blue" data-height="89"><div class="bar-value">24.089€</div></div><div class="bar-label">Jun</div></div>
+<div class="bar-group"><div class="bar blue" data-height="95"><div class="bar-value">25.542€</div></div><div class="bar-label">Jul</div></div>
+<div class="bar-group"><div class="bar blue" data-height="95"><div class="bar-value">25.542€</div></div><div class="bar-label">Ago</div></div>
+<div class="bar-group"><div class="bar blue" data-height="100"><div class="bar-value">26.994€</div></div><div class="bar-label">Sep</div></div>
+</div>
+</div>
+
+<!-- Members Chart -->
+<div class="chart-container reveal">
+<div class="chart-title">👥 Evolución Socios — <span class="real-tag">REAL</span> Oct→Mar + <span class="proj-tag">PROY.</span> Abr→Sep</div>
+<div class="bar-chart" id="membersChart">
+<div class="bar-group"><div class="bar green" data-height="58"><div class="bar-value">210</div></div><div class="bar-label">Oct ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="70"><div class="bar-value">253</div></div><div class="bar-label">Nov ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="75"><div class="bar-value">270</div></div><div class="bar-label">Dic ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="78"><div class="bar-value">280</div></div><div class="bar-label">Ene ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="78"><div class="bar-value">280</div></div><div class="bar-label">Feb ✓</div></div>
+<div class="bar-group"><div class="bar green" data-height="83"><div class="bar-value">300</div></div><div class="bar-label">Mar ✓</div></div>
+<div class="bar-group"><div class="bar blue" data-height="83"><div class="bar-value">300</div></div><div class="bar-label">Abr</div></div>
+<div class="bar-group"><div class="bar blue" data-height="89"><div class="bar-value">320</div></div><div class="bar-label">May</div></div>
+<div class="bar-group"><div class="bar blue" data-height="89"><div class="bar-value">320</div></div><div class="bar-label">Jun</div></div>
+<div class="bar-group"><div class="bar blue" data-height="94"><div class="bar-value">340</div></div><div class="bar-label">Jul</div></div>
+<div class="bar-group"><div class="bar blue" data-height="94"><div class="bar-value">340</div></div><div class="bar-label">Ago</div></div>
+<div class="bar-group"><div class="bar blue" data-height="100"><div class="bar-value">360</div></div><div class="bar-label">Sep</div></div>
+</div>
+</div>
+
+<div class="timeline-note reveal">
+<span style="font-size:18px">🚀</span>
+<span><strong>Rentable desde el Mes 2.</strong> Gastos mensuales estabilizados ~12.500-13.000€. Ingreso medio: ~57-59€/mes. Adquisición mayoritariamente orgánica (boca a boca + ancrage local).</span>
+</div>
+
+<div class="timeline-note reveal" style="background:rgba(255,204,0,.08);border-color:rgba(255,204,0,.15);color:#FFD633;margin-top:12px">
+<span style="font-size:18px">💡</span>
+<span><strong>Lectura para el inversor:</strong> el product-market fit está validado y ha sido más rápido de lo previsto. Las proyecciones utilizadas en el plan financiero son conservadoras a la vista de estos resultados.</span>
+</div>
+</div>
+</section>
+
+<!-- PHOTO DIVIDER -->
+<div class="photo-divider" style="background-image:url('https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/05H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png')"></div>
+
+<!-- ═══ EQUIPO FUNDADOR ═══ -->
+<section id="equipo">
+<div class="container">
+<div class="reveal"><div class="slabel">Equipo Fundador</div>
+<h2 class="stitle">Tres perfiles complementarios: Ops + Finanzas + Growth</h2>
+<p class="ssub">Un equipo experimentado con track record demostrado. La combinación perfecta de excelencia operativa, disciplina financiera y capacidad comercial.</p>
+</div>
+
+<div class="team-grid">
+<div class="team-card reveal">
+<div class="team-avatar" style="background:linear-gradient(135deg,#FFCC00,#FFD633)">CM</div>
+<div>
+<h3>Carlos Magretti Fernández</h3>
+<div class="role" style="color:var(--g)">Co-fundador · Operaciones</div>
+<ul>
+<li>+10 años gestionando centros deportivos</li>
+<li>Dirigió un centro Brooklyn <strong>TOP 5 mundial</strong> durante varios años</li>
+<li>Lanzó y estructuró múltiples centros (Marina, Sant Antoni...)</li>
+<li>Ejecución terreno excepcional</li>
+<li>Cultura de exigencia: recluta equipos sólidos, crea cultura fuerte</li>
+</ul>
+<p style="margin-top:8px;color:#FFCC00;font-weight:700;font-size:12px">→ Operador de élite, no un manager estándar</p>
+</div>
+</div>
+
+<div class="team-card reveal">
+<div class="team-avatar" style="background:linear-gradient(135deg,var(--blue),#60a5fa)">OP</div>
+<div>
+<h3>Olivier Philippe</h3>
+<div class="role" style="color:var(--blue)">Co-fundador · Finanzas &amp; Estrategia</div>
+<ul>
+<li>+15 años en inversión inmobiliaria</li>
+<li>Multi-emprendedor</li>
+<li>Experto en estructuración y financiación</li>
+<li>Disciplina financiera y visión estratégica</li>
+<li>Control de costes y optimización</li>
+</ul>
+<p style="margin-top:8px;color:var(--blue);font-weight:700;font-size:12px">→ Rigor financiero + visión a largo plazo</p>
+</div>
+</div>
+
+<div class="team-card reveal">
+<div class="team-avatar" style="background:linear-gradient(135deg,#FF8C00,#FFA500)">JA</div>
+<div>
+<h3>Joachim Antonsen</h3>
+<div class="role" style="color:var(--gold)">Co-fundador · Negocio &amp; Crecimiento</div>
+<ul>
+<li>Lead Partner Manager EMEA en Shopify</li>
+<li>Experiencia multi-mercado (Francia, España, Portugal, Grecia)</li>
+<li>Responsable: bancos, partners, estrategia comercial</li>
+<li>Expertise en desarrollo de negocio y growth</li>
+<li>Red de contactos B2B internacional</li>
+</ul>
+<p style="margin-top:8px;color:var(--gold);font-weight:700;font-size:12px">→ Business development + capacidad de scaling</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ EQUIPO DE COACHES ═══ -->
+<section>
+<div class="container">
+<div class="reveal"><div class="slabel">Equipo de Coaches</div>
+<h2 class="stitle">No solo entrenadores — líderes de comunidad</h2>
+<p class="ssub">Un equipo intencionalmente diverso, humano y complementario. Cada coach aporta algo único que refuerza la conexión con los socios.</p>
+</div>
+
+<div class="coach-grid">
+<div class="coach-card reveal">
+<div class="coach-avatar" style="background:rgba(255,204,0,.12)">💪</div>
+<h3>Florencia Sofía Galati Rando</h3>
+<div class="coach-role">Lead Coach</div>
+<p>Experimentada, estructurada, con capacidad de management. Ejecución perfecta + energía positiva. Referente del equipo y pilar de la operativa diaria.</p>
+</div>
+<div class="coach-card reveal">
+<div class="coach-avatar" style="background:rgba(59,130,246,.12)">🧘</div>
+<h3>Kumar Martin Bunich</h3>
+<div class="coach-role">Coach</div>
+<p>Perfil discreto pero adorado por la comunidad. Conexión humana profunda con cada socio. Construye lealtad genuina a través de la cercanía.</p>
+</div>
+<div class="coach-card reveal">
+<div class="coach-avatar" style="background:rgba(245,158,11,.12)">🏉</div>
+<h3>Ramiro I Robledo</h3>
+<div class="coach-role">Coach</div>
+<p>Ex rugbyman. Energía, carisma y proximidad natural. Motivador innato que transforma cada sesión en una experiencia memorable.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ COMUNIDAD ═══ -->
+<section>
+<div class="container">
+<div class="reveal"><div class="slabel">Diferenciador Clave</div>
+<h2 class="stitle">La comunidad como motor de crecimiento</h2>
+<p class="ssub">El secreto del éxito de Sant Boi no es solo el producto — es la comunidad. Un ecosistema que genera retención, engagement y adquisición orgánica.</p>
+</div>
+
+<div class="comm-grid">
+<div class="comm-card reveal"><div class="ci2">💬</div><h3>~200</h3><p>Personas en el grupo WhatsApp para ~300 socios (67% participación)</p></div>
+<div class="comm-card reveal"><div class="ci2">🎉</div><h3>Eventos</h3><p>Actividades regulares internas y externas que refuerzan vínculos</p></div>
+<div class="comm-card reveal"><div class="ci2">🏃</div><h3>Sponsoring</h3><p>Patrocinio de carreras y eventos locales — anclaje territorial</p></div>
+<div class="comm-card reveal"><div class="ci2">👨‍👩‍👧‍👦</div><h3>Familia</h3><p>Sentimiento de pertenencia que va más allá del entreno</p></div>
+</div>
+
+<div class="timeline-note reveal" style="background:rgba(255,204,0,.08);border-color:rgba(255,204,0,.15);color:#FFD633;margin-top:24px">
+<span style="font-size:18px">🎯</span>
+<span><strong>Resultado:</strong> Engagement elevado → Retención fuerte → Adquisición orgánica (boca a boca). El mejor canal de marketing es gratuito: una comunidad que habla de ti.</span>
+</div>
+</div>
+</section>
+
+<!-- ═══ GALERÍA + INSTAGRAM ═══ -->
+<section class="ig-section">
+<div class="container">
+<div class="reveal"><div class="slabel">📸 Brooklyn Fitboxing — En Imágenes</div>
+<h2 class="stitle">Más que un gimnasio — una experiencia</h2>
+<p class="ssub">Interiores de clubs Brooklyn Fitboxing. Diseño industrial premium, sacos inteligentes, iluminación inmersiva y ambiente de comunidad.</p>
+</div>
+<div class="ig-grid reveal">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/2H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN_2-1024x604.png" alt="Sala de entrenamiento Brooklyn Fitboxing" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/05H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Interior Brooklyn Fitboxing - sacos" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/10H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Recepción Brooklyn Fitboxing" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/09H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Vista lateral sacos Brooklyn" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/07H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Vestuarios Brooklyn Fitboxing" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/05V_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Detalle interior Brooklyn" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/06V_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Ambiente Brooklyn Fitboxing" loading="lazy">
+<img src="https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/13V_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png" alt="Diseño Brooklyn Fitboxing" loading="lazy">
+</div>
+<div style="text-align:center;margin-top:28px" class="reveal">
+<a href="https://www.instagram.com/brooklynfitboxing/" target="_blank" class="ig-cta">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+@brooklynfitboxing — Ver más en Instagram
+</a>
+</div>
+</div>
+</section>
+
+<!-- ═══ PRENSA ═══ -->
+<section>
+<div class="container">
+<div class="reveal"><div class="slabel">📰 Repercusión en prensa</div>
+<h2 class="stitle">Sant Boi: 600 inscritos antes de abrir</h2>
+<p class="ssub">La apertura del centro de Sant Boi generó cobertura mediática local con un dato impactante: más de 600 vecinos reservaron su prueba antes del día de inauguración.</p>
+</div>
+
+<div class="press-grid">
+<a href="https://www.elllobregat.com/noticia/30346/sant-boi/600-personas-enloquecen-a-saco-con-el-fitboxing-el-deporte-que-arrasa-en-todo-el-mundo-llega-a-sant-boi.html" target="_blank" class="press-card reveal">
+<div class="press-source">📰 El Llobregat</div>
+<h3>600 personas enloquecen "a saco" con el fitboxing: el deporte que arrasa en todo el mundo llega a Sant Boi</h3>
+<p>"El fitboxing se está extendiendo como un reguero de pólvora y arrasa entre quienes buscan un entrenamiento completo, intenso y, sobre todo, divertido."</p>
+<div class="press-date">17 octubre 2025</div>
+</a>
+
+<a href="https://www.vilapress.cat/articulo/deportes/2025-10-08/5458233-sant-boi-da-bienvenida-primer-centro-brooklyn-fitboxing-600-vecinos-inscritos-antes-apertura" target="_blank" class="press-card reveal">
+<div class="press-source">📰 Vilapress</div>
+<h3>Sant Boi da la bienvenida al primer centro Brooklyn Fitboxing con más de 600 vecinos inscritos antes de su apertura</h3>
+<p>"Brooklyn Fitboxing suma ya cuatro centros en el Baix Llobregat, reforzando su presencia en la comarca."</p>
+<div class="press-date">8 octubre 2025</div>
+</a>
+
+<a href="https://www.instagram.com/p/DPfnqrBjIWX/" target="_blank" class="press-card reveal">
+<div class="press-source">📸 GymFactory (Instagram)</div>
+<h3>Sant Boi estrena su primer gimnasio de boxeo conectado con Brooklyn Fitboxing</h3>
+<p>"El gimnasio arranca con más de 600 vecinos que ya han reservado su clase de prueba, un dato que confirma la expectación generada."</p>
+<div class="press-date">6 octubre 2025</div>
+</a>
+</div>
+
+<div class="press-highlight reveal">
+<div class="ph-icon">🎙️</div>
+<div>
+<blockquote>"Nuestro objetivo es que cada persona que entre en el club sienta que, más allá de entrenar, vive una experiencia completa desde el primer minuto hasta que sale. Se forma como una gran familia, donde todos se conocen y se lo pasan bien mientras practican deporte."</blockquote>
+<cite>— Carlos Magretti, Manager de Brooklyn Fitboxing Sant Boi (El Llobregat, Oct 2025)</cite>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHOTO DIVIDER -->
+<div class="photo-divider" style="background-image:url('https://manueltorresdesign.com/en/wp-content/uploads/sites/2/2022/02/10H_BROOKLYN-FITBOXING-MANUEL-TORRES-DESIGN.png')"></div>
+
+<!-- ═══ OPORTUNIDAD VILADECANS ═══ -->
+<section id="viladecans">
+<div class="container">
+<div class="reveal"><div class="slabel">📍 Oportunidad de Mercado</div>
+<h2 class="stitle">Viladecans — la misma oportunidad, optimizada</h2>
+<p class="ssub">Centro de ciudad, zona densa con vida local activa. Prácticamente cero oferta de fitness premium / boutique. El mismo gap de mercado que generó el boom de Sant Boi.</p>
+</div>
+
+<div class="vila-compare reveal">
+<div class="vila-box">
+<h3>Sant Boi (referencia)</h3>
+<div class="big" style="color:var(--t2)">~220.000€</div>
+<p style="font-size:13px;color:var(--t3)">Inversión total primer club</p>
+</div>
+<div class="vila-arrow">→</div>
+<div class="vila-box" style="border-color:rgba(255,204,0,.3)">
+<h3 style="color:var(--g)">Viladecans (target)</h3>
+<div class="big" style="color:var(--g)">~170.000€</div>
+<p style="font-size:13px;color:var(--t3)">-23% optimización · +IVA</p>
+</div>
+</div>
+
+<div class="reveal"><h3 style="font-size:16px;font-weight:700;margin-bottom:16px">¿De dónde viene la optimización?</h3></div>
+<div class="opti-list">
+<div class="opti-item reveal"><span class="oi">📐</span><span>Superficie optimizada: 100-120 m² (vs mayor en Sant Boi)</span></div>
+<div class="opti-item reveal"><span class="oi">🏗️</span><span>Obras optimizadas — centros similares: &lt;90k€ (confirmado por Brooklyn)</span></div>
+<div class="opti-item reveal"><span class="oi">🧠</span><span>Aprendizaje del primer proyecto: mejores proveedores, menos errores</span></div>
+<div class="opti-item reveal"><span class="oi">📍</span><span>Ubicación centro-ciudad: densidad + vida local + visibilidad natural</span></div>
+<div class="opti-item reveal"><span class="oi">🏘️</span><span>Ciudad con 0 oferta fitness boutique → efecto "boom inmediato"</span></div>
+<div class="opti-item reveal"><span class="oi">📣</span><span>Comunidad existente de Sant Boi como amplificador de lanzamiento</span></div>
+</div>
+
+<div class="timeline-note reveal" style="margin-top:24px">
+<span style="font-size:18px">💡</span>
+<span><strong>Tesis de inversión:</strong> Replicación de un modelo ya validado + ejecución mejorada + inversión optimizada = riesgo significativamente reducido vs primer centro.</span>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PLAN DE NEGOCIO ═══ -->
+<section id="plan">
+<div class="container">
+<div class="reveal"><div class="slabel">Plan de Negocio</div>
+<h2 class="stitle">Club Smart 12 Sacos — Viladecans</h2>
+<p class="ssub">Formato compacto y altamente rentable, optimizado para maximizar el retorno con inversión contenida y operativa simplificada.</p>
+</div>
+
+<div class="invest-grid">
+<div class="card reveal">
+<h3 style="font-size:17px;margin-bottom:18px">💼 Desglose de Inversión (Ref. B-Plan)</h3>
+<table class="invest-table">
+<thead><tr><th>Concepto</th><th>Importe</th></tr></thead>
+<tbody>
+<tr><td>Canon de entrada</td><td>15.000€</td></tr>
+<tr><td>Estudio de mercado</td><td>1.000€</td></tr>
+<tr><td>Play Brooklyn Box (12 sacos, sensores, luces, hardware, suelo, mancuernas, TV, sonido)</td><td>15.500€</td></tr>
+<tr><td>Carteles, decoración y mobiliario</td><td>8.500€</td></tr>
+<tr><td>Campaña de lanzamiento</td><td>6.000€</td></tr>
+<tr><td>Fianzas</td><td>2.000€</td></tr>
+<tr><td>Reformas local + proyecto técnico</td><td>~90.000€</td></tr>
+<tr class="total"><td>TOTAL estimado (sin IVA)</td><td>~138.000€</td></tr>
+</tbody>
+</table>
+<div class="detail-item" style="margin-top:10px"><span class="label">IVA (21%)</span><span class="value">~29.000€</span></div>
+<div class="detail-item" style="border-bottom:2px solid var(--g);padding-bottom:10px"><span class="label" style="font-weight:700;color:var(--t1)">TOTAL target (IVA inc.)</span><span class="value" style="color:var(--g);font-size:17px">~170.000€</span></div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:20px">
+<div class="card reveal">
+<h3 style="font-size:17px;margin-bottom:18px">🏢 Concepto del Club</h3>
+<div class="detail-item"><span class="label">Superficie</span><span class="value">100-120 m²</span></div>
+<div class="detail-item"><span class="label">Personal</span><span class="value">2 FTE</span></div>
+<div class="detail-item"><span class="label">Equipo</span><span class="value">1 Club Manager + 1-3 trainers</span></div>
+<div class="detail-item"><span class="label">Alquiler estimado</span><span class="value">~1.000€/mes</span></div>
+<div class="detail-item"><span class="label">Gastos mensuales fijos</span><span class="value">~8.000-9.000€</span></div>
+<div class="detail-item"><span class="label">Equipamiento</span><span class="value">12 sacos inteligentes</span></div>
+</div>
+
+<div class="card reveal">
+<h3 style="font-size:17px;margin-bottom:18px">🏦 Estructura de Financiación</h3>
+<div class="detail-item"><span class="label">Apalancamiento target</span><span class="value" style="color:var(--blue)">~70%</span></div>
+<div class="detail-item"><span class="label">Deuda</span><span class="value">130-140k€</span></div>
+<div class="detail-item"><span class="label">Fondos propios</span><span class="value">~60k€</span></div>
+<div class="detail-item"><span class="label">Tasa de interés (hip.)</span><span class="value">5%</span></div>
+<div class="detail-item"><span class="label">Plazo</span><span class="value">7 años</span></div>
+<div class="detail-item"><span class="label">Carencia (1 año)</span><span class="value">~556€/mes</span></div>
+<div class="detail-item"><span class="label">Cuota normal</span><span class="value">~2.151€/mes</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ ESCENARIOS ═══ -->
+<section id="escenarios">
+<div class="container">
+<div class="reveal"><div class="slabel">Análisis de Escenarios</div>
+<h2 class="stitle">Tres escenarios financieros</h2>
+<p class="ssub">Incluso en el escenario conservador, la inversión se recupera. En el caso base — y a la vista de Sant Boi — los retornos son excepcionales.</p>
+</div>
+
+<div class="scenario-grid">
+<div class="scenario-card reveal" style="border-color:rgba(255,204,0,.15)">
+<div class="sc-name" style="color:var(--g)">🟢 Optimista</div>
+<div style="margin-bottom:16px"><div class="sc-value" style="color:var(--g)">58%</div><div class="sc-label">TIR Estimada</div></div>
+<div class="sc-details">
+<div class="sc-row"><span class="label">Socios Año 3</span><span class="value" style="color:var(--g)">270</span></div>
+<div class="sc-row"><span class="label">EBITDA Año 3</span><span class="value">60.312€</span></div>
+<div class="sc-row"><span class="label">x Dinero</span><span class="value" style="color:var(--g)">6.6x</span></div>
+<div class="sc-row"><span class="label">Recuperación</span><span class="value">&lt;3 años</span></div>
+</div>
+</div>
+
+<div class="scenario-card featured reveal">
+<div class="sc-name" style="color:var(--g)">📊 Caso Base</div>
+<div style="margin-bottom:16px"><div class="sc-value" style="color:var(--g)">36%</div><div class="sc-label">TIR Estimada</div></div>
+<div class="sc-details">
+<div class="sc-row"><span class="label">Socios Año 3</span><span class="value" style="color:var(--g)">230</span></div>
+<div class="sc-row"><span class="label">EBITDA Año 1</span><span class="value">7.203€</span></div>
+<div class="sc-row"><span class="label">EBITDA Año 2</span><span class="value">41.253€</span></div>
+<div class="sc-row"><span class="label">EBITDA Año 3</span><span class="value">41.830€</span></div>
+<div class="sc-row"><span class="label">x Dinero</span><span class="value" style="color:var(--g)">4.1x</span></div>
+<div class="sc-row"><span class="label">Recuperación</span><span class="value">3 años</span></div>
+</div>
+</div>
+
+<div class="scenario-card reveal" style="border-color:rgba(245,158,11,.15)">
+<div class="sc-name" style="color:var(--gold)">🟡 Conservador</div>
+<div style="margin-bottom:16px"><div class="sc-value" style="color:var(--gold)">12%</div><div class="sc-label">TIR Estimada</div></div>
+<div class="sc-details">
+<div class="sc-row"><span class="label">Socios Año 3</span><span class="value" style="color:var(--gold)">190</span></div>
+<div class="sc-row"><span class="label">EBITDA Año 3</span><span class="value">25.683€</span></div>
+<div class="sc-row"><span class="label">x Dinero</span><span class="value" style="color:var(--gold)">1.9x</span></div>
+<div class="sc-row"><span class="label">Recuperación</span><span class="value">&lt;7 años</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PROYECCIÓN 7 AÑOS ═══ -->
+<section id="proyeccion">
+<div class="container">
+<div class="reveal"><div class="slabel">Evolución Proyectada</div>
+<h2 class="stitle">Proyección a 7 años — Caso Base</h2>
+<p class="ssub">Incluye venta del negocio a 3x EBITDA en Año 7. Recordatorio: estas proyecciones son conservadoras — Sant Boi las supera 10.7x en Año 1.</p>
+</div>
+
+<div class="proj-wrapper reveal">
+<table class="proj-table">
+<thead><tr><th>Concepto</th><th>Año 1</th><th>Año 2</th><th>Año 3</th><th>Año 4</th><th>Año 5</th><th>Año 6</th><th>Año 7</th></tr></thead>
+<tbody>
+<tr><td>Ingresos</td><td>106K€</td><td>150K€</td><td>151K€</td><td>151K€</td><td>151K€</td><td>151K€</td><td>151K€</td></tr>
+<tr><td>EBITDA</td><td>7,2K€</td><td>41,3K€</td><td>41,8K€</td><td>41,8K€</td><td>41,8K€</td><td>41,8K€</td><td>41,8K€</td></tr>
+<tr><td>Cash Flow</td><td>11K€</td><td>34,2K€</td><td>17,1K€</td><td>12K€</td><td>12K€</td><td>12K€</td><td>137,5K€</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="proj-summary reveal">
+<div class="pscard"><div class="psv">257.604€</div><div class="psl">EBITDA Acumulado (7 años)</div></div>
+<div class="pscard"><div class="psv">235.933€</div><div class="psl">Cash total para los fundadores</div></div>
+<div class="pscard"><div class="psv">4.1x</div><div class="psl">Multiplicador sobre inversión propia</div></div>
+<div class="pscard"><div class="psv">178.705€</div><div class="psl">Cash Flow acum. (incl. venta)</div></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SINERGIAS MULTI-CENTRO ═══ -->
+<section>
+<div class="container">
+<div class="reveal"><div class="slabel">Sinergias</div>
+<h2 class="stitle">La escalabilidad empieza con el 2º centro</h2>
+<p class="ssub">Viladecans no es un proyecto aislado — es el segundo paso de una estrategia de grupo con sinergias reales desde el día 1.</p>
+</div>
+
+<div class="syn-grid">
+<div class="syn-card reveal"><div class="si">👥</div><h3>Mutualización de coaches</h3><p>Los entrenadores pueden rotar entre Sant Boi y Viladecans, optimizando horarios y cubriendo picos de demanda.</p></div>
+<div class="syn-card reveal"><div class="si">💰</div><h3>Optimización de costes</h3><p>Administración compartida, marketing conjunto, negociación de proveedores con más volumen.</p></div>
+<div class="syn-card reveal"><div class="si">🔗</div><h3>Efecto red</h3><p>Cross-promoción entre centros, eventos comunitarios conjuntos, mayor visibilidad de marca en la zona.</p></div>
+<div class="syn-card reveal"><div class="si">🚀</div><h3>Aceleración del crecimiento</h3><p>Los aprendizajes de Sant Boi se aplican directamente. Menos curva de aprendizaje, mejor ejecución desde el día 1.</p></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ VISIÓN DE GRUPO ═══ -->
+<section id="vision">
+<div class="container">
+<div class="reveal"><div class="slabel">Visión a Largo Plazo</div>
+<h2 class="stitle">Estrategia de grupo, no proyecto aislado</h2>
+<p class="ssub">Este no es un segundo club — es la segunda pieza de una estrategia de crecimiento deliberada con hitos claros.</p>
+</div>
+
+<div class="vtl reveal">
+<div class="vtl-item active"><div class="yr">Octubre 2025</div><h3>🟢 Sant Boi — Primer centro operativo</h3><p>Prueba de concepto validada. ~300 socios en 6 meses. 10.7x sobre el plan. Rentable desde el Mes 2.</p></div>
+<div class="vtl-item active"><div class="yr">2026</div><h3>🟢 Viladecans — Segundo centro</h3><p>Replicación optimizada. Inversión reducida -23%. Ejecución mejorada con equipo experimentado.</p></div>
+<div class="vtl-item"><div class="yr">2027</div><h3>⏳ Tercer centro operativo</h3><p>Consolidación del grupo con 3 centros. Sinergias plenas entre centros. Estructura grupo establecida.</p></div>
+<div class="vtl-item"><div class="yr">2028</div><h3>⏳ +150.000€ resultado anual grupo</h3><p>Objetivo de resultado consolidado. Cash flow significativo. Capacidad de autofinanciación para siguiente fase.</p></div>
+<div class="vtl-item"><div class="yr">Siguiente fase</div><h3>⏳ Diversificación — Box funcional / CrossFit</h3><p>Expansion del portafolio con un nouveau concepto fitness complémentaire. Capitalizar la experiencia opérationnelle et la base de clients.</p></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BAJO RIESGO ═══ -->
+<section id="riesgo">
+<div class="container">
+<div class="reveal"><div class="slabel">Análisis de Riesgo</div>
+<h2 class="stitle">Por qué este es un crédito de bajo riesgo</h2>
+<p class="ssub">Múltiples factores convergen para hacer de este segundo centro una inversión con un perfil de riesgo muy favorable.</p>
+</div>
+
+<div class="risk-grid">
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Track record real:</strong> Sant Boi genera 10.7x el plan en su primer año. El equipo ha demostrado su capacidad de ejecución.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Segundo centro = riesgo reducido:</strong> Replicación de un modelo ya validado, con ejecución mejorada e inversión optimizada (-23%).</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Equipo élite:</strong> Carlos (Top 5 mundial Brooklyn), Olivier (15 años inversión), Joachim (Shopify). Complementariedad ops + finance + growth.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Franquicia líder:</strong> +270 centros, +50M€ facturación, crecimiento sostenido. Red consolidada y en plena expansión.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Break-even a solo 140 socios:</strong> Sant Boi alcanzó 300 en 6 meses. El umbral se cruza rápidamente.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Ingresos recurrentes y predecibles:</strong> ARPU ~56€/mes, modelo de membresía, frecuencia 7-8 entrenamientos/mes. Alta fidelización.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Comunidad como barrera:</strong> 200 personas en WhatsApp, eventos locales, boca a boca. Adquisición orgánica que reduce costes de marketing.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Mercado virgen:</strong> Viladecans tiene prácticamente 0 oferta fitness boutique/premium. Gap de mercado evidente.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Sector en boom:</strong> Fitness boutique en crecimiento exponencial post-pandemia. Brooklyn Fitboxing lidera la tendencia.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Sinergias multi-centro:</strong> Mutualización de coaches, costes compartidos, efecto red — la rentabilidad mejora con cada centro.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>+60% franquiciados multi-club:</strong> La mayoría de franquiciados abren más de un club. La mejor prueba de satisfacción.</div></div>
+<div class="risk-item reveal"><div class="risk-check">✓</div><div class="risk-text"><strong>Colateral sólido:</strong> Equipamiento, contrato de franquicia, y sobre todo el flujo de caja demostrado del club de Sant Boi.</div></div>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ CONCLUSIÓN ═══ -->
+<section class="conclusion">
+<div class="container">
+<div class="reveal">
+<div class="slabel" style="justify-content:center">Conclusión</div>
+<div class="big-text">Primer centro = <span class="accent">prueba de concepto validada y sobreperformante</span>.<br>Viladecans = <span class="accent">replicación optimizada</span>.<br>El proyecto ya está en éxito — ahora entra en <span class="accent">fase de scaling</span>.</div>
+
+<div class="conc-pills">
+<span class="conc-pill">✅ Product-market fit validado</span>
+<span class="conc-pill">✅ Equipo experimentado + complementario</span>
+<span class="conc-pill">✅ Mercado = oportunidad clara</span>
+<span class="conc-pill">✅ Riesgo controlado y reducido</span>
+<span class="conc-pill">✅ Visión de grupo a long terme</span>
+<span class="conc-pill">✅ 10.7x sobre plan en Sant Boi</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<p class="fl main">Brooklyn Fitboxing — Propuesta de Financiación — Viladecans</p>
+<p class="fl">Fundadores: Carlos Magretti · Olivier Philippe · Joachim Antonsen</p>
+<p class="fl">Documento preparado para entidad financiera — Marzo 2026</p>
+<div class="fc">🔒 Documento confidencial — Uso exclusivo para evaluación de financiación</div>
+</div>
+</footer>
+
+<!-- JS -->
+<script>
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+function animC(el,target,dur=2000){const s=el.dataset.suffix||'';let c=0;const inc=target/(dur/16);const t=setInterval(()=>{c+=inc;if(c>=target){c=target;clearInterval(t)}el.textContent=(target>=1000?Math.floor(c).toLocaleString('es-ES'):Math.floor(c))+s},16)}
+const cObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting&&!x.target.dataset.animated){x.target.dataset.animated='1';const t=parseInt(x.target.dataset.count);if(t)animC(x.target,t)}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
+
+const bObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting&&!x.target.dataset.animated){x.target.dataset.animated='1';x.target.querySelectorAll('.bar').forEach((b,i)=>{setTimeout(()=>{b.style.height=b.dataset.height+'%'},i*60)})}})},{threshold:.2});
+document.querySelectorAll('.bar-chart').forEach(c=>{c.querySelectorAll('.bar').forEach(b=>b.style.height='0%');bObs.observe(c)});
+</script>
+</body>
+</html>
